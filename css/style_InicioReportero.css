@@ -1,0 +1,211 @@
+:root {
+  --Celeste: #2de2e6;
+  --Rojo: #e71f3d;
+  --Rosa: #f6019d;
+  --Azul: #1c77c3;
+  --Blanco: #f6f3f3;
+  --borde: #1a1919;
+  --Gris: #d1cdcd;
+  --Verde: #32c58d;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 16px;
+  background-color: var(--Blanco);
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 900;
+}
+
+p {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+/*Fin navegador*/
+.BackGround {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  top: 25%;
+  background-color: var(--Blanco);
+  flex-direction: column;
+  align-items: center;
+}
+
+.Container_InicioReportero {
+  margin-top: 38rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  top: 38rem;
+  /* height: 300rem; */
+}
+
+/*inicio noticias*/
+
+.Box_NuevaNoticia {
+  text-align: end;
+  margin-bottom: 5vh;
+}
+
+.Box_NuevaNoticia a {
+  color: black;
+  background-color: var(--Azul);
+  border-radius: 1rem;
+  box-shadow: 14px 8px 0 0 var(--borde);
+  border: 4px solid var(--borde);
+  font-size: 1.5vw;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1.5vh 3.5vw;
+  transition: all 0.4s;
+}
+
+.Box_NuevaNoticia a:hover {
+  background-color: var(--Verde);
+  box-shadow: none;
+  color: var(--Blanco);
+
+}
+
+.Container_noticias_Rechazadas {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Box_NoticiaRechazadas {
+  width: 100%;
+  height: 90%;
+}
+
+.RowContainer_NoticiasRechazadas {
+  /* width: 90%; */
+  /* height: 25%; */
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: flex-start;
+}
+
+.Box_NoticiasRechazadas {
+  margin: 1rem 2rem 0 0;
+  border-radius: 1.5rem;
+  box-shadow: 14px 8px 0 0 var(--borde);
+  border: 5px solid var(--borde);
+  width: 35%;
+  /* height: 95%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--Gris);
+}
+
+.Box_ImagenNoticia img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.Box_ResumenNoticia {
+  width: 95%;
+}
+
+.Box_ResumenNoticia p {
+  text-align: center;
+}
+
+.Box_FechaNoticia {
+  width: 90%;
+}
+
+.Box_FechaNoticia p {
+  text-align: right;
+}
+
+.Box_NoticiaReciente {}
+
+.Box_TituloNoticia {
+  width: 90%;
+
+  text-align: center;
+}
+
+.Box_ButtonsNoticia {}
+
+.Box_ButtonsNoticia input {
+  box-shadow: 9px 9px 0 0 var(--borde);
+  border: 5px solid var(--borde);
+  border-radius: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.Box_ButtonsNoticia #Id_BotonEditar {
+  background-color: var(--Verde);
+}
+
+.Box_ButtonsNoticia #Id_BotonEliminar {
+  background-color: var(--Rojo);
+}
+
+/*fin noticias*/
+
+footer {
+  width: 100%;
+  height: 15rem;
+  background-color: var(--Rojo);
+  text-align: center;
+  position: relative;
+  margin-top: 15rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Box_Volver {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 90%;
+  height: 50%;
+}
+
+.Box_Volver button {
+  background-color: var(--Azul);
+  width: 15rem;
+  height: 8rem;
+  box-shadow: 9px 9px 0 0 var(--borde);
+  border: 5px solid var(--borde);
+  border-radius: 1rem;
+}
+
+.Box_Volver button:hover {
+  background-color: var(--Rojo);
+  box-shadow: none;
+}

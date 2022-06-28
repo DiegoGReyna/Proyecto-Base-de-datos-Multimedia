@@ -1,0 +1,710 @@
+:root {
+  --Celeste: #2de2e6;
+  --Rojo: #e71f3d;
+  --Rosa: #f6019d;
+  --Azul: #1c77c3;
+  --Blanco: #f6f3f3;
+  --borde: #1a1919;
+  --Gris: #d1cdcd;
+  --Verde: #32c58d;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 900;
+}
+
+p {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: bolder;
+}
+
+h3 {
+  font-size: 3.5rem;
+  font-weight: bolder;
+}
+
+h4 {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.BackGround {
+  position: absolute;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.backGroundNoticia {
+  margin-top: 38rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  top: 38rem;
+  /* height: 300rem; */
+}
+
+.Container_Noticia {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 150rem;
+}
+
+.Box_Noticia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.Box_Titular_Noticia {
+  text-align: center;
+  width: 100%;
+}
+
+.Box_LugarAcontecimiento_Noticia {
+  text-align: center;
+  width: 100%;
+}
+
+.Box_FechaHora_Noticia {
+  text-align: center;
+  width: 100%;
+}
+
+.Box_Multimedia_Noticia {
+  width: 65%;
+  border-radius: 1.5rem;
+  border: 5px solid var(--borde);
+  background-color: var(--Gris);
+  padding: 0.5rem;
+}
+
+.Box_carruse {
+  /* border-radius: 2.5rem;
+  border: 5px solid var(--borde); */
+}
+
+.Box_carruse img {
+  /* border-radius: 2.5rem;
+  border: 5px solid var(--borde); */
+}
+
+.Box_FechaHoraPubliacion_Noticia {
+  width: 60%;
+  text-align: start;
+}
+
+.Box_FirmaReportero {
+  width: 60%;
+  text-align: end;
+}
+
+.Box_Descripcion_Noticia {
+  width: 75%;
+
+  margin-bottom: 2.5rem;
+}
+
+.Container_Noticias_Relacionadas {
+  width: 100%;
+  height: auto;
+  margin-top: 15rem;
+}
+
+.Container_Noticias_Relacionadas h2 {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.Container_NoticiasRelacionadas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.RowContainer_NoticiasRelacionadas {
+  width: 100%;
+  /* height: 75rem; */
+  display: flex;
+  justify-content: center;
+}
+
+.Box_NoticiasRelacionadas {
+  margin: 1rem 2rem 0 0;
+  border-radius: 1.5rem;
+  box-shadow: 14px 8px 0 0 var(--borde);
+  border: 5px solid var(--borde);
+  width: 25%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--Gris);
+}
+
+.Box_ImagenNoticia img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.Box_ResumenNoticia {
+  width: 95%;
+  height: 25rem;
+}
+
+.Box_ResumenNoticia p {
+  text-align: center;
+}
+
+.Box_FechaNoticia {
+  width: 90%;
+}
+
+.Box_FechaNoticia p {
+  text-align: right;
+}
+
+.Box_NoticiaReciente {}
+
+.Box_TituloNoticia {
+  width: 90%;
+
+  text-align: center;
+}
+
+/* fin de noticias recientes */
+
+.Container_Comentarios {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* height: 80rem; */
+  position: relative;
+  top: 10rem;
+  height: auto;
+}
+
+
+
+.Container_Comentarios hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 96%;
+  background-color: var(--borde);
+  border-top: 5px solid;
+  border-radius: 5px;
+}
+
+.box_Megusta {
+  background-color: var(--Gris);
+  display: flex;
+  flex-direction: row;
+  border-radius: 1.5rem;
+  box-shadow: 14px 8px 0 0 var(--borde);
+  border: 5px solid var(--borde);
+  width: 40%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.Container_LIkesButton {
+  display: flex;
+  padding: 4%;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.BoxContador_Likes {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  /* margin-right: 10%; */
+  /* width: 30%;*/
+}
+
+.Box_CantidadLIkes {
+  display: flex;
+}
+
+
+
+
+
+.Box_CantidadLIkes p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.Box_ButtonLike button {
+  background-color: var(--Azul);
+  width: 7.5rem;
+  height: 4rem;
+  box-shadow: 9px 9px 0 0 var(--borde);
+  border: 4px solid var(--borde);
+  border-radius: 1rem;
+  transition: all 0.4s;
+}
+
+.Box_ButtonLike button:hover {
+  box-shadow: none;
+  background-color: var(--Verde);
+}
+
+.BoxContador_Likes p {
+  margin-left: 2rem;
+}
+
+.Box_Comentarios {
+  background-color: var(--Gris);
+  text-align: center;
+  border-radius: 1.5rem;
+  box-shadow: 14px 8px 0 0 var(--borde);
+  border: 5px solid var(--borde);
+  width: 75%;
+  /* height: 80rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 4rem;
+  height: auto;
+}
+
+.Container_TextAreaButton {
+  width: 100%;
+  height: 40%;
+  flex-direction: column;
+}
+
+.Box_CamentarioArea {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ImagenPerfilComentario {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10rem;
+  width: 10rem;
+  height: 10rem;
+  /* margin-right: 4rem; */
+  box-shadow: 14px 8px 0 0 var(--borde);
+  border: 5px solid var(--borde);
+}
+
+.Box_TextoComentario {
+  height: 90%;
+  width: 100%;
+  background-color: var(--Blanco);
+}
+
+.Box_FechaComentario {
+
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+
+}
+
+.ImagenPerfilComentario img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10rem;
+}
+
+
+.Box_ComentariActivo {
+  display: flex;
+  width: 95%;
+  flex-direction: row;
+  justify-content: center;
+  height: 10rem;
+}
+
+.Box_RespuestaComentario {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+#idComentario {
+  height: 100%;
+  width: 85%;
+  margin-left: auto;
+  background-color: var(--Blanco);
+
+  border: none;
+  border-radius: 2rem;
+
+}
+
+.Box_OpcionesComentario {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 5px solid var(--borde);
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  justify-content: space-between;
+}
+
+.Box_EliminarComentario {
+  width: 10%;
+  display: flex;
+  margin-right: 10%;
+
+}
+
+.Box_EliminarComentario button {
+  background-color: var(--Azul);
+  border-radius: 1rem;
+  border: 3.5px solid var(--borde);
+  box-shadow: 3.5px 2px 0 0 var(--borde);
+  transition: all 0.4s;
+}
+
+.Box_EliminarComentario button:hover {
+  background-color: var(--Rojo);
+  box-shadow: none;
+  color: var(--Blanco);
+
+}
+
+.Box_CamentarioArea textarea {
+  resize: none;
+}
+
+.Box_ComentarioActivoYBoton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Box_ComentarioActivoYBoton button {
+  margin-top: 1rem;
+  width: 15rem;
+  height: 5rem;
+  border-radius: 2rem;
+  background-color: var(--Azul);
+  border: 5px solid var(--borde);
+  transition: all 0.4s;
+
+  box-shadow: 6px 4px 0 0 var(--borde);
+}
+
+.Box_ComentarioActivoYBoton button:hover {
+  background: var(--Verde);
+  color: var(--Blanco);
+  box-shadow: none;
+}
+
+.Container_comentario_Echo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+
+.Box_Contenido_Comentario {
+  box-shadow: 3.5px 2px 0 0 var(--borde);
+  border: 5px solid var(--borde);
+  display: flex;
+  flex-direction: column;
+  border-radius: 2rem;
+  height: 15rem;
+  overflow: auto;
+  text-align: start;
+  width: 100%;
+}
+
+.Box_InputRespuestaComentario {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 3.5px 2px 0 0 var(--borde);
+  border: 5px solid var(--borde);
+  border-radius: 1rem;
+}
+
+.Box_InputRespuestaComentario input {
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+  height: 1rem;
+  height: 4.5rem;
+  border: none;
+  background-color: var(--Blanco);
+}
+
+.box_comentario_Echo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.Box_UsuarioContenido {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  width: 100%;
+  align-items: center;
+}
+
+.Box_Usuario_Comentario {
+  width: 95%;
+  height: 5rem;
+  margin-left: 1rem;
+  text-align: start;
+}
+
+
+
+.ComentarioRelizado {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 95%;
+}
+
+.Box_BotonesRechazarAprobar {
+  /* margin-top: 2rem; */
+  display: flex;
+}
+
+.Box_BotonesRechazarAprobar input {
+  margin: 0 1rem;
+  height: 4vh;
+  box-shadow: 9px 9px 0 0 var(--borde);
+  border: 2px solid var(--Azul);
+  border-radius: 1rem;
+  font-size: 1.2vw;
+  font-weight: bold;
+  text-align: center;
+  background: var(--Azul);
+  transition: all 0.4s;
+}
+
+.Box_BotonesRechazarAprobar input:hover {
+  background: var(--Verde);
+  box-shadow: none;
+  border: 2px solid var(--Verde);
+  color: var(--Blanco);
+}
+
+
+.BotonRechazarNoticia {
+  margin: 0 1rem;
+  height: 4vh;
+  box-shadow: 9px 9px 0 0 var(--borde);
+  border: 2px solid var(--Azul);
+  border-radius: 1rem;
+  font-size: 1.2vw;
+  font-weight: bold;
+  text-align: center;
+  background: var(--Azul);
+  transition: all 0.4s;
+}
+
+.BotonRechazarNoticia:hover {
+  background: var(--Rojo);
+  box-shadow: none;
+  border: 2px solid var(--Rojo);
+  color: var(--Blanco);
+}
+
+
+
+
+.Container_BotonesRechazarAprobar {
+  /* margin-top: 5%; */
+  margin-top: 20vh;
+}
+
+footer {
+  width: 100%;
+  height: 15rem;
+  background-color: var(--Rojo);
+  text-align: center;
+  position: relative;
+  margin-top: 15rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Box_Volver {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 90%;
+  height: 50%;
+}
+
+.Box_Volver button {
+  background-color: var(--Azul);
+  width: 15rem;
+  height: 8rem;
+  box-shadow: 9px 9px 0 0 var(--borde);
+  border: 5px solid var(--borde);
+  border-radius: 1rem;
+}
+
+.Box_Volver button:hover {
+  background-color: var(--Rojo);
+  box-shadow: none;
+}
+
+@media (max-width: 1560px) {
+  .RowContainer_NoticiasRelacionadas h3 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 1090px) {
+  h3 {
+    font-size: 2rem;
+  }
+
+  .Box_ResumenNoticia p {
+    font-size: 1.5rem;
+  }
+
+  .RowContainer_NoticiasRelacionadas {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .Box_NoticiasRelacionadas {
+    border-radius: 1.5rem;
+    box-shadow: 7px 4px 0 0 var(--borde);
+    border: 5px solid var(--borde);
+    width: 90%;
+    height: 95%;
+  }
+
+  .Container_NoticiasRelacionadas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .box_Megusta {
+    border-radius: 1.2rem;
+    box-shadow: 3.5px 2px 0 0 var(--borde);
+    border: 5px solid var(--borde);
+    width: 35%;
+  }
+
+  .Container_LIkesButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .Container_LIkesButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .Box_ButtonLike button {
+    background-color: var(--Azul);
+    width: 7rem;
+    height: 4rem;
+    box-shadow: 3px 3px 0 0 var(--borde);
+    border: 2px solid var(--borde);
+  }
+
+  .Container_TextAreaButton h2 {
+    font-size: 2.5rem;
+    margin: 1rem;
+  }
+
+  .Box_ComentarioActivoYBoton {
+    position: relative;
+    left: 6rem;
+
+  }
+
+  .Box_ComentarioActivoYBoton button {
+    margin-top: 1rem;
+    width: 10rem;
+    height: 4rem;
+    border-radius: 1.5rem;
+  }
+
+
+
+  .Box_Usuario_Comentario {
+    height: 4rem;
+    margin-left: 0;
+    text-align: start;
+  }
+
+  .Box_Contenido_Comentario p {
+    font-size: 1.2rem;
+    padding: 3px;
+  }
+
+  .Box_Usuario_Comentario h4 {
+    font-size: 2.5rem;
+  }
+
+  /*
+   .BackGroundInicio {
+    top: 35%;
+  }
+  
+  .RowContainer_NoticiasRelacionadas {
+    flex-direction: column;
+  }
+  .Box_TituloNoticia h2 {
+    font-size: 2rem;
+  }
+  .Box_ResumenNoticia p {
+    font-size: 1.5rem;
+  } 
+  */
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 480px) {}
+
+@media (max-width: 320px) {}
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 1200px) {}

@@ -1,0 +1,658 @@
+:root {
+  --Celeste: #2de2e6;
+  --Rojo: #e71f3d;
+  --Rosa: #f6019d;
+  --Azul: #1c77c3;
+  --Blanco: #f6f3f3;
+  --borde: #1a1919;
+  --Gris: #d1cdcd;
+  --Verde: #32c58d;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+select {
+  font-size: 3rem;
+  font-weight: 400;
+  font-weight: bold;
+}
+
+input {
+  font-size: 3rem;
+}
+
+body {
+  font-size: 16px;
+  background-color: var(--Blanco);
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 900;
+}
+
+p {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+label {
+  font-size: 3rem;
+  font-weight: 400;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: bolder;
+}
+
+.BackGround {
+  position: absolute;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.BackGround {
+  position: relative;
+  top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Container_SeleccionColorNombreSeccion {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.Box_SeleccionSeccion {
+  width: 90%;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.Box_SeleccionSeccion label,
+.Box_SeleccionSeccion select {
+  width: 95%;
+}
+
+.Box_SeleccionColorSeccion {
+  width: 90%;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.Box_SeleccionColorSeccion label,
+.Box_SeleccionColorSeccion select {
+  width: 95%;
+}
+
+.Box_ActualizarColorSeleccion {
+  width: 33.33%;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.Box_ActualizarColorSeleccion input {
+  width: 50%;
+  height: 5rem;
+  background-color: var(--Azul);
+  border-radius: 0.5rem;
+  box-shadow: 14px 8px 0 0 var(--borde);
+  border: 5px solid var(--borde);
+  font-weight: bold;
+  transition: all 0.4s;
+}
+
+.Box_ActualizarColorSeleccion input:hover {
+  background-color: var(--Verde);
+  box-shadow: none;
+  color: var(--Blanco);
+}
+
+.Form_SeleccionDecolorSecciones {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 90%;
+}
+
+.Container_InicioEditor {
+  margin-top: 38rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  top: 38rem;
+  height: 300rem;
+}
+
+.Form_SeleccionDecolorSecciones input,
+.Form_SeleccionDecolorSecciones label,
+.Form_SeleccionDecolorSecciones select {
+  display: block;
+}
+
+.Container_ColorSecciones {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid var(--borde);
+  width: 80%;
+  height: 15%;
+}
+
+.Box_ColorSecciones {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.Container_OrdenSecciones {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid var(--borde);
+  width: 80%;
+  height: 15%;
+}
+
+.Container_ReporterosEliminar {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid var(--borde);
+  width: 80%;
+  height: 15%;
+}
+
+.Box_OrdenSecciones {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.Container_SeleccionInputSeccionIndice {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 100%;
+}
+
+.Form_OrdenSecciones input,
+.Form_OrdenSecciones label,
+.Form_OrdenSecciones select {
+  display: block;
+}
+
+.Form_OrdenSecciones {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 90%;
+}
+
+.Box_OrdenSeleccionSecciones {
+  width: 40%;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.Box_ColorInput {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputColor {
+  width: 100%;
+}
+
+
+.Box_OrdenSeleccionSecciones select,
+.Box_OrdenSeleccionSecciones label {
+  width: 95%;
+}
+
+.Box_OrdenInputIndice {
+  width: 33.33%;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.Box_OrdenInputIndice input,
+.Box_OrdenInputIndice label {
+  width: 95%;
+  height: 100%;
+}
+
+.Box_OrdenButtonActualizar {
+  width: 33.33%;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.Box_OrdenButtonActualizar input {
+  width: 50%;
+  height: 5rem;
+  background-color: var(--Azul);
+  border-radius: 0.5rem;
+  box-shadow: 14px 8px 0 0 var(--borde);
+  border: 5px solid var(--borde);
+  font-weight: bold;
+  transition: all 0.4s;
+}
+
+.Box_OrdenButtonActualizar input:hover {
+  background-color: var(--Verde);
+  box-shadow: none;
+  color: var(--Blanco);
+}
+
+.Container_NoticiasPendiente {
+  width: 80%;
+  border: 5px solid var(--borde);
+}
+
+.Box_ReporterosEliminar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.Form_ReporteroEliminar input,
+.Form_ReporteroEliminar label,
+.Form_ReporteroEliminar select {
+  display: block;
+}
+
+.Form_ReporteroEliminar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 90%;
+}
+
+.Container_SeleccionButtonReporteroEliminar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.Box_ReporteroSeleccion {
+  width: 40%;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.Box_ReporteroSeleccion label,
+select {
+  width: 100%;
+}
+
+.Box_ReporteroButtonEliminar {
+  width: 33.33%;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.Box_ReporteroButtonEliminar button {
+  width: 50%;
+  height: 5rem;
+  background-color: var(--Azul);
+  border-radius: 0.5rem;
+  box-shadow: 14px 8px 0 0 var(--borde);
+  border: 5px solid var(--borde);
+  font-weight: bold;
+  transition: all 0.4s;
+}
+
+.Box_ReporteroButtonEliminar button:hover {
+  box-shadow: none;
+  background-color: var(--Verde);
+  color: var(--Blanco);
+}
+
+.Container_SeccionAgregar {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid var(--borde);
+  width: 80%;
+  height: 15%;
+}
+
+.Box_SeccionAgregar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.Form_SeccionAgregar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 90%;
+}
+
+.Form_SeccionAgregar input,
+.Form_SeccionAgregar textarea {
+  display: block;
+}
+
+.Container_InputButtonTexareaSeccionAgregar {
+  display: flex;
+  width: 95%;
+  align-items: center;
+}
+
+.Box_SeccionAgregarInput {
+  width: 90%;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.Box_SeccionAgregarTextArea {
+  width: 90%;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.Box_SeccionAgregarTextArea textarea,
+.Box_SeccionAgregarTextArea label {
+  width: 100%;
+}
+
+.Container_InputsAgrugarSecciones {
+  display: flex;
+  width: 35%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.Box_AgregarSeccionButton {
+  width: 33.33%;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.Box_AgregarSeccionButton button,
+.Box_AgregarSeccionButton input {
+  width: 50%;
+  height: 5rem;
+  background-color: var(--Azul);
+  border-radius: 0.5rem;
+  box-shadow: 14px 8px 0 0 var(--borde);
+  border: 5px solid var(--borde);
+  transition: all 0.4s;
+}
+
+.Box_AgregarSeccionButton input:hover {
+  background-color: var(--Verde);
+  color: var(--Blanco);
+  box-shadow: none;
+}
+
+.Box_SeccionAgregarInput label,
+.Box_SeccionAgregarInput input {
+  width: 100%;
+}
+
+.Contenedor_Noticias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+  width: 90%;
+  height: 300rem;
+}
+
+.RowContainer_Noticias {
+  width: 100%;
+
+  display: flex;
+}
+
+.Box_Noticia {
+  background-color: var(--Gris);
+  margin: 1rem 2rem 0 0;
+  border-radius: 1.5rem;
+  box-shadow: 14px 8px 0 0 var(--borde);
+  border: 5px solid var(--borde);
+  width: 25%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Box_ImagenNoticia {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  align-items: center;
+}
+
+.Box_ImagenNoticia img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.Box_ResumenNoticia {
+  width: 95%;
+}
+
+.Box_ResumenNoticia p {
+  text-align: center;
+}
+
+.Box_FechaNoticia {
+  width: 90%;
+}
+
+.Box_FechaNoticia p {
+  text-align: right;
+}
+
+.Box_NoticiaReciente {}
+
+.Box_TituloNoticia {
+  width: 90%;
+
+  text-align: center;
+}
+
+footer {
+  width: 100%;
+  height: 15rem;
+  background-color: var(--Rojo);
+  text-align: center;
+  position: relative;
+  margin-top: 15rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Box_Volver {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 90%;
+  height: 50%;
+}
+
+.Box_Volver button {
+  background-color: var(--Azul);
+  width: 15rem;
+  height: 8rem;
+  box-shadow: 9px 9px 0 0 var(--borde);
+  border: 5px solid var(--borde);
+  border-radius: 1rem;
+}
+
+.Box_Volver button:hover {
+  background-color: var(--Rojo);
+  box-shadow: none;
+}
+
+@media (max-width: 1560px) {
+  .Container_InicioEditor h2 {
+    font-size: 3.5rem;
+  }
+
+  .Container_InicioEditor label {
+    font-size: 2.5rem;
+  }
+
+  .Container_InicioEditor select {
+    font-size: 2rem;
+  }
+
+  .Container_InicioEditor input {
+    font-size: 1.5vh;
+  }
+}
+
+@media (max-width: 1090px) {
+
+
+  /*Agregar secciones*/
+
+
+}
+
+@media (max-width: 768px) {
+
+  /*color de secciones*/
+  .Container_SeleccionColorNombreSeccion {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .Box_SeleccionSeccion {
+    width: 100%;
+  }
+
+  .Box_SeleccionColorSeccion {
+    width: 95%;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .Box_ColorInput {
+    width: 50%;
+  }
+
+  .inputColor {
+    width: 100%;
+  }
+
+  .Box_ActualizarColorSeleccion {
+    width: 100%;
+  }
+
+  /*orden de secciones*/
+
+  .Container_SeleccionInputSeccionIndice {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    justify-content: space-around;
+  }
+
+  .Box_OrdenButtonActualizar {
+    width: 100%;
+  }
+
+  .Box_OrdenSeleccionSecciones {
+    width: 100%;
+  }
+
+  /*Reportero por eliminar*/
+  .Container_SeleccionButtonReporteroEliminar {
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90%;
+  }
+
+  .Box_ReporteroSeleccion {
+    width: 100%;
+  }
+
+  .Box_ReporteroButtonEliminar {
+    width: 100%;
+  }
+
+  /*Agregar seccion*/
+  .Container_InputButtonTexareaSeccionAgregar {
+    flex-direction: column;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .Container_InputsAgrugarSecciones {
+    width: 100%;
+  }
+
+  .Container_InputsAgrugarSecciones {
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .Box_AgregarSeccionButton {
+    width: 100%;
+  }
+
+  .Box_SeccionAgregar label {
+    font-size: 2.2vh;
+  }
+}
+
+@media (max-width: 480px) {}
+
+@media (max-width: 320px) {}

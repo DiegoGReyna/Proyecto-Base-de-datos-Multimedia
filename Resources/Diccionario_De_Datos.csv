@@ -1,0 +1,74 @@
+COLUMN_NAME,TABLE_NAME,COLUMN_TYPE,CHARACTER_MAXIMUM_LENGTH,COLUMN_COMMENT,IS_NULLABLE,COLUMN_KEY
+ADRESS_ID,adress,int(11),,Id de la direccion de la noticia,NO,PRIMARY KEY
+COUNTRY,adress,varchar(30),30,Pais donde sucedio la noticia,YES,
+STATE,adress,varchar(50),50,Estado donde sucedio la noticia,YES,
+MUNICIPIO,adress,varchar(50),50,Municipio donde sucedio la noticia,YES,
+SUBURB,adress,varchar(50),50,Calle donde sucedio la noticia,YES,
+FK_NEWS_ADDRES_ID,adress,int(11),,Id de la noticia a la que corresponde la direccion,NO,FOREIGN KEY
+COLOR_FOR_SECTIONS_ID,colors_for_sections,int(11),,Id del color para la seccion,NO,PRIMARY KEY
+HEXADECIMAL,colors_for_sections,varchar(9),9,Valor hexadecimal del color,NO,
+COMMENTS_ID,comments,int(11),,Id del comentario del usuario,NO,PRIMARY KEY
+FK_NEWS_ID,comments,int(11),,Id de la noticia que comento,NO,FOREIGN KEY
+FK_USER_ID,comments,int(11),,Id del usuario que comento,NO,FOREIGN KEY
+COMMENT,comments,varchar(150),150,Comentario del usuario a la noticia,NO,
+DATE_OF_COMMENT,comments,datetime,,Dia de la creación del comentario,YES,
+IS_ACTIVE,comments,tinyint(1),,"Activo, para el borrado lógico",YES,
+RESPONCES_ID,comments_response,int(11),,Id de la respuesta del comentario del usuario,NO,PRIMARY KEY
+FK_USER_ID,comments_response,int(11),,Id del usuario que respondio,NO,FOREIGN KEY
+RESPONSE,comments_response,varchar(150),150,Respuesta del usuario a la noticia,NO,
+COMMENTS_ID,comments_response,int(11),,Id del comentario respondido,NO,FOREIGN KEY
+DATE_OF_RESPONSE,comments_response,datetime,,Dia de la creación de la respuesta,YES,
+IS_ACTIVE,comments_response,tinyint(1),,"Activo, para el borrado lógico",YES,
+KEY_WORDS_ID,key_words,int(11),,Id de la palabra clave de la noticia,NO,PRIMARY KEY
+FK_NEWS_ID,key_words,int(11),,Id de la noticia que le gusto,NO,FOREIGN KEY
+KEY_WORD_TEXT,key_words,varchar(25),25,Palabra clave para la noticia,NO,
+LIKES_ID,likes,int(11),,"Id del like, para no repetir like por usuario",NO,PRIMARY KEY
+FK_NEWS_ID,likes,int(11),,Id de la noticia que le gusto,NO,FOREIGN KEY
+FK_USER_ID,likes,int(11),,Id del usuario que dio like,NO,FOREIGN KEY
+MULTIMEDIA_ID,multimedia,int(11),,Id del contenido multimedia,NO,PRIMARY KEY
+FK_NEWS_ID,multimedia,int(11),,Id de la noticia a la quepertenece el contenido,NO,FOREIGN KEY
+PATH_MULTIMEDIA,multimedia,varchar(250),250,Direccion del archivo,NO,
+TYPE,multimedia,varchar(2),2,Inicial del tipo de archivo V o I,NO,
+NEWS_ID,news,int(11),,Id de la noticia,NO,PRIMARY KEY
+NEWS_TITLE,news,varchar(50),50,Titulo de la noticia,NO,
+STATUS,news,int(11),,FK que indica el status de la noticia,NO,
+DESCRIPTION,news,varchar(100),100,Descripcion de la noticia,NO,
+TEXT,news,varchar(200),200,Texto de la noticia,NO,
+VIEWSCOUNT,news,int(11),,Contador de visitas,YES,
+FK_RELEVANCE,news,int(11),,Relevancia de la noticia,NO,FOREIGN KEY
+FK_REPORTERO_ID,news,int(11),,FK para la información del reportero,NO,FOREIGN KEY
+DATE_INCIDENT,news,datetime,,Fecha de cuando ocurrio el suceso,NO,
+DATE_RELEASE,news,datetime,,"Null, porque se actualizara cuando se publique la noticia",YES,
+RELEVANCE_ID,news_relevance,int(11),,Id de la relevancia de la noticia,NO,PRIMARY KEY
+NAME_RELEVANCE,news_relevance,varchar(30),30,Nombre de la relevancia asignada a la noticia,NO,
+DESCRIPTION_RELEVANCE,news_relevance,varchar(100),100,Descripción de la relevancia de la noticia,NO,
+VALUE,news_status,varchar(3),3,Valor del Status,NO,PRIMARY KEY
+DESCRIPTION,news_status,varchar(200),200,Nombre del status asignada a la noticia,NO,
+CREATION_DATE,news_status,datetime,,Fecha de creacion del registro,NO,
+IS_ACTIVE,news_status,tinyint(1),,Indica si el registro esta activo en la base de datos,NO,
+SECTION_ID,sections,int(11),,Id de la seccion,NO,PRIMARY KEY
+SECTION_NAME,sections,varchar(50),50,Nombre de la seccion,NO,
+DESCRIPTION,sections,varchar(200),200,Descripcion de la sección,NO,
+ORDER_OF_SECTIONS,sections,varchar(200),200,Nombre de la sección,NO,
+FK_COLOR_ID,sections,int(11),,Id del color de la seccion de la noticia,NO,FOREIGN KEY
+IS_ACTIVE,sections,tinyint(1),,Baja lógica de la sección de noticias,YES,
+SECTION_FOR_NEWS_ID,sections_for_news,int(11),,Id de la seccion para la noticia,NO,PRIMARY KEY
+FK_SECTION_ID,sections_for_news,int(11),,Información de la seccion,NO,FOREIGN KEY
+FK_NEWS_ID,sections_for_news,int(11),,Id de la noticia a la que corresponde la sección,NO,FOREIGN KEY
+USER_ID,users,int(11),,Llave primaria de la tabla USERS,NO,PRIMARY KEY
+EMAIL,users,varchar(200),200,"Correo principal, con el se accede al sitio",NO,
+USER_PWD,users,varchar(200),200,Contraseña para ingresar al sitio,NO,
+PROFILE_PIC,users,mediumblob,16777215,Foto de perfil del usuario,YES,
+USER_FULL_NAME,users,varchar(200),200,Nombre completo del usuario,YES,
+STATUS,users,varchar(3),3,Status del usuario,YES,FOREIGN KEY
+USER_TYPE_ID,users,int(11),,Llave primaria de la tabla USER_TYPES,NO,FOREIGN KEY
+CREATION_DATE,users,datetime,,Fecha de creacion del registro,YES,
+ACTIVE,users,tinyint(1),,Indica si el registro esta activo en la base de datos,NO,
+VALUE,user_status,varchar(3),3,Valor del Status,NO,PRIMARY KEY
+DESCRIPTION,user_status,varchar(200),200,Nombre del status asignado al usuario,NO,
+CREATION_DATE,user_status,datetime,,Fecha de creacion del registro,NO,
+ACTIVE,user_status,tinyint(1),,Indica si el registro esta activo en la base de datos,NO,
+USER_TYPE_ID,user_types,int(11),,Llave primaria de la tabla USER_TYPES,NO,PRIMARY KEY
+DESCRIPTION,user_types,varchar(200),200,Nombre del tipo de usuario,NO,
+CREATION_DATE,user_types,datetime,,Fecha de creacion del registro,NO,
+ACTIVE,user_types,tinyint(1),,Indica si el registro esta activo en la base de datos,NO,

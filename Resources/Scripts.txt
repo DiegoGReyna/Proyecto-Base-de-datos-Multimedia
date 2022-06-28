@@ -1,0 +1,55 @@
+USE `news_center`;
+DROP procedure IF EXISTS `sp_approveNews`;
+
+USE `news_center`;
+DROP procedure IF EXISTS `news_center`.`sp_approveNews`;
+;
+
+DELIMITER $$
+USE `news_center`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_approveNews`(IN ID INT)
+BEGIN
+	UPDATE NEWS
+    SET FK_STATUS_ID = 3,
+    DATE_RELEASE = current_date()
+    WHERE NEWS_ID = ID;
+    
+    DELETE FROM COMMENTS_RESPONSE
+    WHERE FK_NEWS_ID_CR = ID;
+    
+    DELETE FROM COMMENTS
+    WHERE FK_NEWS_ID = ID;
+    
+    SELECT "TODO BIEN" AS MESSAGE;
+
+END$$
+
+DELIMITER ;
+;
+
+USE `news_center`;
+DROP procedure IF EXISTS `sp_edit_News`;
+
+USE `news_center`;
+DROP procedure IF EXISTS `news_center`.`sp_edit_News`;
+;
+
+DELIMITER $$
+USE `news_center`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_edit_News`(IN NEWSID INT, IN NEWS_TITLEN VARCHAR(50), IN DESCRN VARCHAR(100),
+	IN IMAGENN LONGBLOB, IN TEXTON VARCHAR(200), IN RELEVANCEN INT , IN DATE_INCIDENTN DATE)
+BEGIN
+	UPDATE `news_center`.`news`
+	SET
+	`NEWS_TITLE` = NEWS_TITLEN,
+	`DESCRIPTION` = DESCRN,
+	`TEXT` = TEXTON,
+	`FK_RELEVANCE` = RELEVANCEN,
+	`COVER_PHOTO` = IMAGENN,
+	`DATE_INCIDENT` = DATE_INCIDENTN
+	WHERE `NEWS_ID` = NEWSID;
+
+END$$
+
+DELIMITER ;
+;
